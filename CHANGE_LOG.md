@@ -1,5 +1,11 @@
 # KSPWheel :: Change Log
 
+* 2017-0826: 0.9.5.18 (Shadowmange) for KSP 1.3
+	+ FIX - Null-ref on animations in the editor for ALG parts.
+	+ FIX - FAR voxelization issues for ALG parts and other KSPWheel parts in general.
+	+ FIX - Gear Action-group state initial setup for ALG parts.
+	+ FIX - Drag-cube updating for ALG parts.
+	+ FIX - Ignore trigger colliders during suspension sweeps.
 * 2017-0715: 0.9.5.17 (Shadowmange) for KSP 1.3
 	+ FIX - KSPWheelDamage module now uses fixed-delta time/time warp multipliers to calculate damage-from-speed.  Should resolve issues of wheels breaking on craft while in orbit.
 	+ FIX - KSPWheelBase now disabled wheel updates when in 'HIGH' timewarp mode (non-physics warp).  Should resolve issues of wheels breaking during timewarp (they were colliding with other parts in the same vessel).
