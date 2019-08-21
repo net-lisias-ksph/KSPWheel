@@ -1,5 +1,26 @@
 # KSPWheel :: Change Log
 
+* 2018-1028: 0.12.10.28 (Shadowmange) for KSP 1.5
+	+ Recompile for KSP 1.5+
+	+ CHANGE - Add UI toggle to tracks module to allow user-configurable track-texture direction.
+	+ CHANGE - Add UI toggle to tracks module to allow for in-editor preview of track rotation/forward direction
+	+ CHANGE - Add ability to specify custom friction curve in KSPWheelBase (see included friction adjust patch example)
+	+ CHANGE - Add ability to specify wheel collider sweep type in the WHEEL config blocks ('colliderType = RAY/SPHERE/CAPSULE')
+	+ FIX - Clean up Dust-Effects related NRE on deleting a part in the editor.
+	+ Friction adjustment patch -- affects all wheels; adjust to suit your needs.  Below is a much stickier friction curve than the current defaults.
+```
+@PART[*]:HAS[@MODULE[KSPWheelBase]]
+{
+	@MODULE[KSPWheelBase]
+	{
+		%exSlipPoint = 0.06
+		%exSlipVal = 1.0
+		%asSlipPoint = 0.35
+		%asSlipVal = 1
+		%tailSlipVal = 0.6
+	}
+}
+```
 * 2018-0410: 0.11.9.27 (Shadowmange) for KSP 1.4.2
 	+ FIX - Correct a null-ref in dust-effects code related to loaded but inactive vessels.
 	+ CHANGE - Also remove some other debugging logspam.
