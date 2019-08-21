@@ -1,5 +1,11 @@
 # KSPWheel :: Change Log
 
+* 2017-0604: 0.9.5.16 (Shadowmange) for KSP 1.3
+	+ Recompile for KSP 1.3
+	+ CHANGE- add capability to set min/max for spring-rating slider through config in KSPWheelBase
+		- minSpringRating = 0.2
+		- maxSpringRating = 0.8
+	+ CHANGE - add per-module config fields to hide various GUI elements for the common/major modules
 * 2017-0319: 0.9.4.15 (Shadowmange) for KSP 1.2.2
 	+ FIX - Error in water propulsion module that would cause lack of thrust output in multi-wheel parts, as well as causing loss of dust-effects upon transition back to land.
 	+ FIX - Sided model handling leaving part unable to surface attach.
