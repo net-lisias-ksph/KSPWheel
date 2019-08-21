@@ -1,5 +1,11 @@
 # KSPWheel :: Change Log
 
+* 2019-0306: 0.14.11.30 (Shadowmange) for KSP 1.6
+	+ FIX - KSPWheelDeployment reporting animation time incorrectly.
+	+ FIX - Clean up version file mislabeled KSP versioning
+	+ CHANGE - Add optional resource use to KSPWheelDeployment
+	+ CHANGE - Add new user-controllable transform manipulation modules, for user controllable animations. (KSPWheelAdjustableDeployment)
+	+ CHANGE - Add new particle effects to KSPWheelRepulsor module
 * 2019-0101: 0.13.10.29 (Shadowmange) for KSP 1.6
 	+ Recompile for KSP 1.6
 	+ Fix NRE when deleting symmetry parts.
