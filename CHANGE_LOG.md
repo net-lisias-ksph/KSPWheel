@@ -1,5 +1,13 @@
 # KSPWheel :: Change Log
 
+* 2017-0122: 0.9.2.9 (Shadowmange) for KSP 1.2.2
+	+ Add dust effects handling -- use either camera or config/biome based color setups.  WIP implementation of water handling.
+	+ Update repulsor handling code - offset force application point to the wheel collider itself.
+	+ Add Adustable-landing-gear handling module
+	+ Suspension animation now displays 50% compression in editor
+	+ Tank steering now respects motor lock and steering lock toggles
+	+ Add .version file for CKAN support
+	+ More detailed patch notes to come later....
 * 2017-0115: 0.9.2.8 (Shadowmange) for KSP 1.2.2 PRE-RELEASE
 	+ IMPORTANT
 		- Completely remove any previous versions of KSPWheel before installing this update.
