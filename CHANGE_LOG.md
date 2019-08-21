@@ -1,5 +1,19 @@
 # KSPWheel :: Change Log
 
+* 2017-0305: 0.9.4.14 (Shadowmange) for KSP 1.2.2
+	+ FIX - Move vessel-debug GUI code out of vessel-module, should result in a minor performance gain with many unloaded vessels in play.
+	+ FIX - Move dust-camera code into a single-instance setup; only a single camera exists that is shared for all vessels.  Should result in minor performance gains with many unloaded vessels in play.
+	+ FIX - Repulsors should no longer temporarily initialize to 'on' when craft is reloaded.
+	+ FIX - Incorrect water-effects for repulsors
+	+ FIX - NaN related crashes in the Advanced Damage Model code
+	+ FIX - Null-ref/IndexOOB in tracks module when loading a part without Skinned-mesh renderers on it.
+	+ FIX - Incorrect double application of 'suspensionOffset' when wheel was in broken state.
+	+ FIX - Incorrect calculation of rolling resistance, especially on small wheels
+	+ FIX - Rework 'locked-suspension' code to work more appropriately.
+	+ CHANGE - New feature - Anti-Roll.  Only works on wheels placed in symmetry.  (WIP)  Currently part of the KSPWheelBase module but may be moved into a secondary module in the future.
+	+ CHANGE - Allow suspension module to specify secondary wheel indexes from which compression for the visible suspension will be averaged.
+	+ CHANGE - KSPWheelDeployment - Rework how 'temp collider' is setup.  This transform should now be positioned in the model hierarchy underneath the suspension transform, and should retract with the rest of the wheel.  Offset and offset axis can now be specified in the config.
+		- WARNING - Might impact other mods that are using the wheel deployment module.  The configs for deployable parts may need to be updated prior to being compatible with this version of KSPWheel
 * 2017-0225: 0.9.3.13 (Shadowmange) for KSP 1.2.2
 	+ FIX - Null-ref in motor module caused by incorrect update ordering
 	+ FIX - Motor limiter not being applied to motor output.
