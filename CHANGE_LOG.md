@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2018-0321: 0.11.7.25 (Shadowmange) for KSP 141
+	+ Recompile for KSP 141
+	+ Disable Dust-effects entirely at the plugin level.
 * 2018-0310: 0.11.6.24 (Shadowmange) for KSP 1.4
 	+ MAJOR CHANGE - Update for KSP 1.4
 	+ FIX - Dust color camera now uses all pixels from sampled texture rather than just a single pixel.
