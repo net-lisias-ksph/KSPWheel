@@ -1,5 +1,7 @@
 # KSPWheel :: Change Log
 
+* 2017-1008: 0.10.5.21 (Shadowmange) for KSP 1.3.1
+	+ Recompile for KSP 1.3.1
 * 2017-0904: 0.9.5.20 (Shadowmange) for KSP 1.3
 	+ FIX - Bouncing upon landing -- springs now use a purely linear response model.
 	+ FIX - Vessel landed-at state detection if the bump-stop collider contacts the ground
