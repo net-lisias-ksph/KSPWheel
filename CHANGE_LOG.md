@@ -1,5 +1,7 @@
 # KSPWheel :: Change Log
 
+* 2018-0121: 0.10.5.23 (Shadowmange) for KSP 1.3.1
+	+ FIX - Wheels with motors will now satisfy the stock 'must be on motorized wheels' contract objective for base construction.
 * 2017-1231: 0.10.5.22 (Shadowmange) for KSP 1.3.1
 	+ CHANGE - Add Max EC/s display to motor module in editor.
 	+ CHANGE - Add a module that can manage UI state for multiple motor modules
