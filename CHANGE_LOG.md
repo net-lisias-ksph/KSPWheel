@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2018-0310: 0.11.6.24 (Shadowmange) for KSP 1.4
+	+ MAJOR CHANGE - Update for KSP 1.4
+	+ FIX - Dust color camera now uses all pixels from sampled texture rather than just a single pixel.
 * 2018-0121: 0.10.5.23 (Shadowmange) for KSP 1.3.1
 	+ FIX - Wheels with motors will now satisfy the stock 'must be on motorized wheels' contract objective for base construction.
 * 2017-1231: 0.10.5.22 (Shadowmange) for KSP 1.3.1
