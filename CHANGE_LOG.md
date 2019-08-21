@@ -1,5 +1,25 @@
 # KSPWheel :: Change Log
 
+* 2017-0225: 0.9.3.13 (Shadowmange) for KSP 1.2.2
+	+ FIX - Null-ref in motor module caused by incorrect update ordering
+	+ FIX - Motor limiter not being applied to motor output.
+	+ FIX - Repulsor power state for UI button not being persistent.  Fixes repulsor power state not being adjustable in the editor.
+	+ FIX - Use velocity of hit-collider when determining wheel velocity.  Helps reduce problems of vehicles sliding when being transported on top of other vehicles; but does not completely fix it.
+	+ FIX - Max driven speed not being updated on gear and/or scale changes in the editor.  One of the fixes for this may have also fixed up a few other wheel-group related updating issues in the editor.
+	+ FIX - Miscalculation of max safe speed that did not include part rescale factor (used in some tracks and stock parts).  Fixes scale-related cases of the motor being able to drive a part past its max safe speed.
+	+ FIX - ALG parts now update their drag cubes based on deployment state.  Also much less draggy in general.
+	+ CHANGE - Tank-steering equipped parts will now also use brake input to assist in steering, especially at higher speeds.  Overall steering response greatly improved.  Will refine this a bit in the next release with an input curve and/or limiting sliders.
+	+ CHANGE - Add 'debug-rendering' to vessel-debug module.  Enables some line-renderers for the wheel axis' and wheel circle.  Should aid in debugging of rigging / positioning.
+	+ CHANGE - Add action group support for repulsor power state, and 5 height presets (20%, 40%, 60%, 80%, 100%).
+	+ UPDATED MODULE - KSPWheelAdjustableGear - Rewritten for new model rigging and suspension operation.  Should be much more stable.
+		- WARNING Existing craft with ALG parts might not restore properly.  Wheels may be misaligned and need to be re-setup in the editor.
+		- Now includes deploy and retract sound effects (stock landing gear sounds)
+	+ NEW MODULE - KSPWheelConstraints - Does what it says... (but more configurable and compatible than stock constraints modules)
+	+ NEW MODULE - KSPWheelWaterPropulsion - Allows for wheels and/or tracks to output propulsive force when partially submerged.  Includes new water dust effects handling for propulsive wheels/tracks.  Module must be added to the part, so will only be enabled on specific parts.
+	+ CHANGE - First pass implementation of 'advanced' damage model.  In this model persistent wear accumulates on the parts based on their use.  Functions in addition to the simple damage model.  Has three main components, some of which may only be applicable to specific wheels.  Each component may be enabled or adjusted through the in-game difficulty settings menu (Settings->Difficulty->KSPWheels -> Damage Model).
+		- Speed - Close to and over max-speed -- persistent increased rolling resistance.  Simulates additional 'drag' due to degradation of wheel material and bearings.
+		- Load - Overloading and hard impacts reduce maximum spring output permanently (until repaired).
+		- Heat - Electric motors output heat relative to the difference between their input and output power (momentary efficiency).  Heat beyond a specific point in the part will accumulate damage in the motor that reduces its max efficiency and max RPM.  Heat can be managed through standard KSP heat management mechanisms.
 * 2017-0212: 0.9.3.12 (Shadowmange) for KSP 1.2.2 PRE-RELEASE
 	+ MAJOR CHANGE - Updated motor mechanics.  Use proper math to derive input power from the torque and efficiency stats for the motor.
 		- Adds a new config file to define an EC->kJ conversion factor.  Defaults to 1EC = 65kJ, which is what the stock wheel motors use.
