@@ -1,5 +1,13 @@
 # KSPWheel :: Change Log
 
+* 2017-0715: 0.9.5.17 (Shadowmange) for KSP 1.3
+	+ FIX - KSPWheelDamage module now uses fixed-delta time/time warp multipliers to calculate damage-from-speed.  Should resolve issues of wheels breaking on craft while in orbit.
+	+ FIX - KSPWheelBase now disabled wheel updates when in 'HIGH' timewarp mode (non-physics warp).  Should resolve issues of wheels breaking during timewarp (they were colliding with other parts in the same vessel).
+	+ FIX - Animation time queries for inverted animations (retract style animations, rather than the officially supported deploy style).  Should clean up problems of offset suspension positioning.  Might still have issues/have created other issues....
+	+ FIX - Scale slider being visible in flight scene
+	+ CHANGE - Add capability to adjust friction multipliers from in-game, both globally and per-part (multiplicative).
+		- Global settings are accessed from the in-game difficulty->KSPWheel settings menu.
+		- Per-part settings must first be activated/enabled from the in-game difficulty->KSPWheel settings menu.
 * 2017-0604: 0.9.5.16 (Shadowmange) for KSP 1.3
 	+ Recompile for KSP 1.3
 	+ CHANGE- add capability to set min/max for spring-rating slider through config in KSPWheelBase
