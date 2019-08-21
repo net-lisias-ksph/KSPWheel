@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2018-0410: 0.11.9.27 (Shadowmange) for KSP 1.4.2
+	+ FIX - Correct a null-ref in dust-effects code related to loaded but inactive vessels.
+	+ CHANGE - Also remove some other debugging logspam.
 * 2018-0402: 0.11.8.26 (Shadowmange) for KSP 1.4.2
 	+ Update and recompile for KSP 1.4.2
 	+ CHANGE - Add new dust-effects system, using the new Shuriken particle system from Unity.
