@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2019-0414: 15.13.32 (Shadowmange) for KSP 1.7
+	+ Recompile for KSP 1.7+
+	+ Add optional resource use for deploy/retract to ALG module
 * 2019-0320: 0.14.12.31 (Shadowmange) for KSP 1.6
 	+ Fix mislabled/tagged version info for CKAN indexing.
 * 2019-0306: 0.14.11.30 (Shadowmange) for KSP 1.6
