@@ -1,5 +1,18 @@
 # KSPWheel :: Change Log
 
+* 2017-0128: 0.9.2.10 (Shadowmange) for KSP 1.2.2
+	+ Fix the difficulty / game-settings sliders to have decimal increments.  Scale and damage values may now be specified with non-integer values.
+	+ Fix tank-steering enabled parts ignoring the steering and motor lock states.
+	+ New spring auto-calculation method using a more configurable setup.  Also cleans up the problems brought on by the integral values which could cause improper spring calculation for wheels that had been over-compressed at any point.
+		- Makes it much easier to land aircraft as the spring force no longer drops off when below <0.5 compression (until ~0.8).
+		- Much larger stable range of linear spring response.  Spring only uses curves at the extremities, mostly to help prevent over-compression.
+		- Use length-corrected mass to calculate spring force -- should be consistent at all scales and suspension travel lengths.
+	+ Fix drag cubes for scaled wheel parts.  They are now updated manually in flight scene for the new part scale.
+	+ Fix ALG doors not lining up properly when placed in symmetry, also properly set the strut and wheel angle when symmetry is enabled.
+	+ Fix ALG adjustments both being called 'strut'.  One of them now specifies that it adjusts the wheel.
+	+ Increase the base durability factor of all wheels by 4x for impacts.  This doesn't impact their load-rating, which is the determining factor for actual impact rating, but it allows them to absorb much more force relative to that load rating.
+	+ Fix FAR incompatibilities, as near as I can tell.  Might be some issues with the colliders that can and will be cleaned up in the near future.
+		- As a bonus wheels can now actually explode and are no longer indestructible.
 * 2017-0122: 0.9.2.9 (Shadowmange) for KSP 1.2.2
 	+ Add dust effects handling -- use either camera or config/biome based color setups.  WIP implementation of water handling.
 	+ Update repulsor handling code - offset force application point to the wheel collider itself.
