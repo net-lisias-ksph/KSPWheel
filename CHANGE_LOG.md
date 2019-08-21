@@ -1,5 +1,24 @@
 # KSPWheel :: Change Log
 
+* 2017-0319: 0.9.4.15 (Shadowmange) for KSP 1.2.2
+	+ FIX - Error in water propulsion module that would cause lack of thrust output in multi-wheel parts, as well as causing loss of dust-effects upon transition back to land.
+	+ FIX - Sided model handling leaving part unable to surface attach.
+	+ FIX - Landed biome detection/updates not working properly, giving incorrect science experiment results.
+	+ FIX - Update the 'wheel state' persistence string immediately on state changes -- should enable greater level of interaction with external mods using the PartModule.Fields[xxxx] interface.
+	+ FIX - Suspension display position in editor being incorrect on scaled models.
+	+ CHANGE - Add ability to specify the name used in action group and UI-buttons for wheel deployment module.  'actionName = XXXX'
+	+ CHANGE - Add the motor stats displays to those that are shown/hidden by the show/hide wheel controls button.
+	+ CHANGE - Add ability to specify min and max gear ratios in the motor/tracks module config ('minGearRatio / maxGearRatio = XXX')
+	+ CHANGE - Add API accessible max-EC-per-second field to motor module, for ease of compatibility with BonVoyage
+	+ (field = maxECDraw, float, non-configurable, for interop use only)
+		- CHANGE - Add action group toggles for:
+			- Motor Lock
+			- Motor Invert
+			- Tank Steering Lock
+			- Tank Steering Invert
+			- Steering Lock
+			- Steering Invert
+			- Suspension Lock (landing legs)
 * 2017-0305: 0.9.4.14 (Shadowmange) for KSP 1.2.2
 	+ FIX - Move vessel-debug GUI code out of vessel-module, should result in a minor performance gain with many unloaded vessels in play.
 	+ FIX - Move dust-camera code into a single-instance setup; only a single camera exists that is shared for all vessels.  Should result in minor performance gains with many unloaded vessels in play.
