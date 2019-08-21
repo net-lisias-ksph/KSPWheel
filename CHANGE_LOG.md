@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2017-0904: 0.9.5.20 (Shadowmange) for KSP 1.3
+	+ FIX - Bouncing upon landing -- springs now use a purely linear response model.
+	+ FIX - Vessel landed-at state detection if the bump-stop collider contacts the ground
 * 2017-0829: 0.9.5.19 (Shadowmange) for KSP 1.3
 	+ FIX - Nullref/spam if launching an aircraft with gear deployed.
 	+ FIX - Also cleans up action-group initial-state setting/updating from gear states.
