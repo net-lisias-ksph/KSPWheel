@@ -1,5 +1,10 @@
 # KSPWheel :: Change Log
 
+* 2018-0402: 0.11.8.26 (Shadowmange) for KSP 1.4.2
+	+ Update and recompile for KSP 1.4.2
+	+ CHANGE - Add new dust-effects system, using the new Shuriken particle system from Unity.
+		- Entirely new particle effects, new textures, and new code.
+		- Implementation is very basic and will be improved in future releases (more options, better default configuration)
 * 2018-0321: 0.11.7.25 (Shadowmange) for KSP 141
 	+ Recompile for KSP 141
 	+ Disable Dust-effects entirely at the plugin level.
