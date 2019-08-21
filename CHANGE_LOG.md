@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2017-0829: 0.9.5.19 (Shadowmange) for KSP 1.3
+	+ FIX - Nullref/spam if launching an aircraft with gear deployed.
+	+ FIX - Also cleans up action-group initial-state setting/updating from gear states.
 * 2017-0826: 0.9.5.18 (Shadowmange) for KSP 1.3
 	+ FIX - Null-ref on animations in the editor for ALG parts.
 	+ FIX - FAR voxelization issues for ALG parts and other KSPWheel parts in general.
