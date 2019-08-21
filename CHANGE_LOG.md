@@ -1,5 +1,26 @@
 # KSPWheel :: Change Log
 
+* 2017-0205: 0.9.2.11 (Shadowmange) for KSP 1.2.2
+	+ CHANGE - Add in-game setting to adjust dust overall output
+	+ CHANGE - Rework ALG deploy/retract animation to eliminate visible clipping
+	+ CHANGE - Steering curve uses vessel velocity rather than wheel velocity (slip no longer reduces steering)
+	+ CHANGE - Adjust sound handling for motor and speed setups
+	+ CHANGE - Adjust sound handling for lateral slip
+	+ CHANGE - Update suspension calculations to include tracks 'load share' specification.  Should reduce jitter/bounce on tracks and give them generally better default setups.
+	+ CHANGE - Fix wheel damage calculation for stress - is now proportional to load/maxLoad rather than linear with over-loading.  Should remove the difference between calculation on large and small wheels.
+	+ CHANGE - Fix Sound effects continuing when wheels are broken/retracted/etc
+	+ CHANGE - Fix track textures continuing to update even when broken
+	+ CHANGE - Set rigidbody to first one found upward in hierarchy.  Should solve problems of wheels not working when attached to physics-less parts.
+	+ CHANGE - Add an 'allowScaling' field to base module, defaults to true.  If set to false disables -all- model scale handling code and force-sets the lookup value for scaling to 1 (used for damage, speed, etc).
+	+ CHANGE - Add optional 'scalingTransform' to config of base module.  If that field is populated only the single specified transform will have model scaling applied to it.  If field is not populated defaults to the existing behavior of scaling all models.
+	+ FIX - Overriding of default deploy state in config not working on root parts (stock bugs)
+	+ CHANGE - Add optional specification for suspension compression state for use with animations.
+	+ FIX - ALG gear will now set the gear-action group state if they are deployed.
+	+ CHANGE - ALG - Add 'Align Wheel To Ground' button.  Does what it says on the label...
+	+ FIX - Repulsor handling near and under the surface of water.  All cases should now have a defined behavior and none should result in any surprising forces on the craft.  Repulsors can now push an underwater craft upwards towards the surface, and smoothly transition up to normal operation once above the water.
+	+ CHANGE - Add repulsor sound effects - they currently depend on loading/ec-use, and are unclamped, so may be -loud- under extreme loads (50t+) for a single repulsor.
+	+ CHANGE - Add brakes to action groups; reassignable.
+		- NOTE - Dust power was incorrectly default to zero in the configs with this release.  Will return to default of 1 in future releases.  To enable dust effects, go into the in-game settings, KSPWheel tab, and set the Dust Effects Power to >0.
 * 2017-0128: 0.9.2.10 (Shadowmange) for KSP 1.2.2
 	+ Fix the difficulty / game-settings sliders to have decimal increments.  Scale and damage values may now be specified with non-integer values.
 	+ Fix tank-steering enabled parts ignoring the steering and motor lock states.
