@@ -1,5 +1,11 @@
 # KSPWheel :: Change Log
 
+* 2017-1231: 0.10.5.22 (Shadowmange) for KSP 1.3.1
+	+ CHANGE - Add Max EC/s display to motor module in editor.
+	+ CHANGE - Add a module that can manage UI state for multiple motor modules
+	+ CHANGE - Add capability to steering module to only turn the visible mesh (disables wheel internal steering)
+	+ CHANGE - Add a module that can remove animations from parts
+	+ CHANGE - Add a module that can play animations at a speed linked to wheel speed
 * 2017-1008: 0.10.5.21 (Shadowmange) for KSP 1.3.1
 	+ Recompile for KSP 1.3.1
 * 2017-0904: 0.9.5.20 (Shadowmange) for KSP 1.3
