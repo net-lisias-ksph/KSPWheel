@@ -1,5 +1,31 @@
 # KSPWheel :: Change Log
 
+* 2017-0115: 0.9.2.8 (Shadowmange) for KSP 1.2.2 PRE-RELEASE
+	+ IMPORTANT
+		- Completely remove any previous versions of KSPWheel before installing this update.
+	+ Wheel Collider
+		- Only apply AG fix when brakes are on and motor torque < brake torque.
+	+ Part Modules
+		- Add WIP scaling support.  Basic functionality is in place but certainly not balanced yet.
+		- Add WIP wheel-group support.  Currently it will update most motor, steering, suspension, brakes, and repulsor stats for wheels with shared group.  The default wheel group of '0' means 'no group', so group must be set to 1 or greater to enable the wheel-group feature.
+		- Add multiple damage types, add settings option to switch between them.  Default = simple.  Options = none, simple, advanced.  (advanced implementation WIP)
+			- In simple mode the current wheel RPM is checked vs. max vehicle speed, excess speed for an extended duration will break the wheel.  Wheel stress is also taken into consideration -- overloaded vehicles or large impacts can break the wheel.
+			- Currently any crew member can repair a wheel.
+		- Complete rework of motor mechanics.  Include switching of gear ratios, and entirely new power calculation methods.
+			- Temporarily add motor substep integration to help decrease problems of motor over-torque in a single physics frame.
+		- Rework tracks module to derive from motor module for easier integration of track motor/torque functions and cleaner part configs.
+		- Complete rework of tracks motor-torque input calculations.  Now keep all wheels at the same linear velocity while maintaining constant energy in the system.
+		- Add max speed specification to base module, used for steering and damage calcs
+		- Add default steering curve based on config-specified max speed for the part.
+		- Add half-track steering mode for tank-steering type wheels.  This inverts the tank-steering motor input when in reverse.
+		- Rework debug module -- now uses a custom GUI and displays data for all wheels on a part.
+		- Clean up default ignored layers to include transparentFX
+		- Save and load persistent data on a per-wheel basis, includes rpm and suspension parameters
+		- Add rolling resistance as a config field to base module
+		- Add correction for gravity into auto-spring calculations
+		- Add basic GetInfo() data to most of the modules.
+		- Remove KF part configs
+		- Remove module-manager as it is no longer needed.
 * 2017-0107: 0.9.1.7 (Shadowmange) for KSP 1.2.2 PRE-RELEASE
 	+ Part Modules
 		- Add a KSPWheel game-settings menu.  Currently only has a single functional setting (advanced mode), more will be added in time.
