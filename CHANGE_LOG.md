@@ -1,5 +1,7 @@
 # KSPWheel :: Change Log
 
+* 2019-0320: 0.14.12.31 (Shadowmange) for KSP 1.6
+	+ Fix mislabled/tagged version info for CKAN indexing.
 * 2019-0306: 0.14.11.30 (Shadowmange) for KSP 1.6
 	+ FIX - KSPWheelDeployment reporting animation time incorrectly.
 	+ FIX - Clean up version file mislabeled KSP versioning
