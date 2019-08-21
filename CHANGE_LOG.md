@@ -1,5 +1,9 @@
 # KSPWheel :: Change Log
 
+* 2019-0101: 0.13.10.29 (Shadowmange) for KSP 1.6
+	+ Recompile for KSP 1.6
+	+ Fix NRE when deleting symmetry parts.
+	+ Add support for flipping of track texture directions in the editor; also add support for flipping of track texture normals UV coordinate scaling to make the effect actually work.
 * 2018-1028: 0.12.10.28 (Shadowmange) for KSP 1.5
 	+ Recompile for KSP 1.5+
 	+ CHANGE - Add UI toggle to tracks module to allow user-configurable track-texture direction.
