@@ -1,5 +1,17 @@
 # KSPWheel :: Change Log
 
+* 2017-0212: 0.9.3.12 (Shadowmange) for KSP 1.2.2 PRE-RELEASE
+	+ MAJOR CHANGE - Updated motor mechanics.  Use proper math to derive input power from the torque and efficiency stats for the motor.
+		- Adds a new config file to define an EC->kJ conversion factor.  Defaults to 1EC = 65kJ, which is what the stock wheel motors use.
+	+ CHANGE - Add additional steering controls for 'high-speed-steering-limit' and 'steering-response'.
+	+ CHANGE - Add configurable fwd and side friction to KSPWheelBase.  Will be used to increase the friction of tracks in a future KF release.
+	+ CHANGE - Rework dust-effects power/speed/energy/emission handling to make them more consistent across various wheels, loads, and scales.
+	+ CHANGE - New repulsor water-effects mode.  Uses a secondary emitter with different parameters and coloring.
+	+ FIX - Dust-particles being offset by Krakensbane origin shifting.  Now update the particle positions when the origin shifts.
+	+ CHANGE - Change the default damper ratio adjustment range to be 0.35 <-> 1.0
+	+ CHANGE - Add 'index-in-duplicates' support to wheel modules.   Allows for part-welding using existing wheel models.
+		- WIP -- works, but may need additional development/fixes for some uses and setups.
+		- NOTE: Will need a new/updated constraints system as the stock one falls on its face in this scenario (cannot properly handle multiple same-named transforms)
 * 2017-0205: 0.9.2.11 (Shadowmange) for KSP 1.2.2
 	+ CHANGE - Add in-game setting to adjust dust overall output
 	+ CHANGE - Rework ALG deploy/retract animation to eliminate visible clipping
