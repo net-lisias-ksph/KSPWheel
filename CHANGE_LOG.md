@@ -1,5 +1,8 @@
 # KSPWheel :: Change Log
 
+* 2019-1205: 16.14.33 (Shadowmange) for KSP 1.8
+	+ Recompile for KSP 1.8
+	+ Remove deprecated/legacy particle-effects code. 
 * 2019-0414: 15.13.32 (Shadowmange) for KSP 1.7
 	+ Recompile for KSP 1.7+
 	+ Add optional resource use for deploy/retract to ALG module
